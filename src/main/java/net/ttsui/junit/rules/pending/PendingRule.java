@@ -29,12 +29,12 @@ public class PendingRule implements MethodRule {
 
     private boolean isAnnotatedWithPending(final FrameworkMethod method) {
         return isMethodAnnotatedWithPending(method) 
-            || isClassAnnotatedWithPending((Class<?>) method.getMethod().getDeclaringClass());
+            || isClassAnnotatedWithPending(method.getMethod().getDeclaringClass());
     }
     
     private boolean isCategorisedAsPending(FrameworkMethod method) {
         return isMethodCategorisedAsPending(method)
-            || isClassCategoriedAsPending((Class<?>) method.getMethod().getDeclaringClass());
+            || isClassCategoriedAsPending(method.getMethod().getDeclaringClass());
     }
 
     private boolean isMethodAnnotatedWithPending(FrameworkMethod method) {

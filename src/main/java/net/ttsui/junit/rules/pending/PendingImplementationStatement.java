@@ -2,11 +2,11 @@ package net.ttsui.junit.rules.pending;
 
 import org.junit.runners.model.Statement;
 
-public class PendingImplementationStatement extends Statement {
+class PendingImplementationStatement extends Statement {
 
     private final Statement base;
 
-    public PendingImplementationStatement(Statement base) {
+    PendingImplementationStatement(Statement base) {
         this.base = base;
     }
 
